@@ -1,0 +1,28 @@
+<div class="card m-3">
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2 d-flex justify-content-center" style="border-right: 2px solid red;">
+          <img src="{{ cvElement.logo }}" alt="">
+        </div>
+        <div class="col-sm-10 text-center">
+          <h5 class="card-title">{{ cvElement.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <button type="button" (click)="onToggleCard()" data-toggle="collapse" data-target="#cardFooter"
+            aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-10">
+          <div class="collapse" [class.collapse]="isCollapsed" id="cardFooter">
+            <p>{{ cvElement.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

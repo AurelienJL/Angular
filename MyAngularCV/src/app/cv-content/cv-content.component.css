@@ -1,0 +1,18 @@
+.col-sm-2 img 
+{
+    width: auto;
+    max-width: 100px;
+    height: auto;
+    max-height: 100px;
+}
+
+.col-sm-2
+{
+    align-content: center
+}
+
+.card-body
+{
+    padding-left: 0;
+    padding-right: 0;
+}
