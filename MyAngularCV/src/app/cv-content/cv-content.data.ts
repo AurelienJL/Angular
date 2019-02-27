@@ -1,6 +1,19 @@
 import { CvElement } from './cv-element';
 
 
+export const navItems = [
+    { url: 'skills', label: 'Compétences' },
+    { url: 'formation', label: 'Formation' },
+    { url: 'projects', label: 'Projets' },
+    { url: 'contact', label: 'Contact' }
+];
+
+export const menuItems = [
+    { url: 'skills', label: 'Compétences' },
+    { url: 'formation', label: 'Formation' },
+    { url: 'projects', label: 'Projets' },
+];
+
 export const presentationData = {
     name: 'Aurélien Jacquin-Labarre',
     position: 'Développeur JAVA-EE',

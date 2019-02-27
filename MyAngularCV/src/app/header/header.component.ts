@@ -1,3 +1,4 @@
+import { CvContentService } from './../cv-content/cv-content.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,17 +10,12 @@ export class HeaderComponent implements OnInit {
   
   isCollapsed: boolean = true;
 
-  navItems = [
-    { url:'home', label:'Accueil'},
-    { url:'skills', label:'Competences'},
-    { url:'formation', label:'Formation'},
-    { url:'projects', label:'Projets'},
-    { url:'contact', label:'Contact'}
-  ];
+  navigationItems;
 
-  constructor() { }
+  constructor(private cvContentService: CvContentService) { }
 
   ngOnInit() {
+    this.navigationItems = this.cvContentService.getNavItems();
   }
 
   onToggleMenu() {

@@ -1,8 +1,16 @@
-import { presentationData, skillsData, formationData } from './cv-content.data';
+import { presentationData, skillsData, formationData, menuItems, navItems } from './cv-content.data';
 import { CvElement } from './cv-element';
 
 
 export class CvContentService {
+
+    getNavItems() {
+        return navItems;
+    }
+
+    getMenuItems() {
+        return menuItems;
+    }
 
     getPresentationData() {
         return presentationData;

@@ -1,26 +1,26 @@
-<div class="container">
+<header>
 
-  <div class="row">
-    <div class="container-fluid text-center bg-primary">
-      <h2>Aurélien Jacquin-Labarre</h2>
-    </div>
-  </div>
-  
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
-    
-    <a class="navbar-brand" routerLink="/home">AJL</a>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top transparent">
+
     <button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar" (click)="onToggleMenu()">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" [class.collapse]="isCollapsed" id="mynavbar">
+    <a class="navbar-brand" routerLink="/home">AJL</a>
+
+    <div class="collapse navbar-collapse justify-content-end" [class.collapse]="isCollapsed" id="mynavbar">
       <ul class="navbar-nav">
-        <li class="nav-item" routerLinkActive="active" *ngFor="let item of navItems">
-          <a class="nav-link" routerLink="{{item.url}}">{{item.label | uppercase}}</a>
+        <li class="nav-item" *ngFor="let item of navigationItems">
+          <a class="nav-link" routerLink="{{item.url}}">{{item.label}}</a>
         </li>
       </ul>
     </div>
 
   </nav>
 
-</div>
+  <div class="banner-center text-center">
+    <h1 class="display-4"><strong>Aurélien Jacquin-Labarre</strong></h1>
+    <div class="banner-underline"></div>
+    <a href="menu">Menu</a>
+  </div>
+</header>
