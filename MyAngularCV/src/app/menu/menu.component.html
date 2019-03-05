@@ -1,17 +1,22 @@
 <section id="menu" class="container-fluid text-center">
-  <div class="title">
-    <h1 class="display-4">Menu</h1>
-    <div class="title-underline"></div>
-    <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-  </div>
+  <app-title-item [title]="title"></app-title-item>
   <div class="row">
     <div class="col-md-4" *ngFor="let item of menuItems">
-      <h2>{{item.label}}</h2>
+      <h2>{{item.label | titlecase}}</h2>
+      <fa name="{{item.iconName}}"></fa>
       <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas magni ea veritatis aspernatur, debitis porro eveniet! Distinctio hic aliquam nemo enim! Tempora expedita, quam perferendis unde officiis suscipit magni explicabo.</p>
-      <a routerLink="{{item.url}}" class="btn btn-block">En savoir plus...</a>
+      <button routerLink="{{item.url}}" class="btn btn-block">En savoir plus...</button>
     </div>
-
   </div>
+</section>
 
+<section id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 text-center box">
+      <app-title-item [title]="title2"></app-title-item>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae non magni ipsum tempore adipisci, repellendus beatae harum fugit eos illum quisquam aliquid ullam cupiditate voluptate amet vero fuga recusandae minima!</p>
+    </div>
+    <div class="col-sm-8 pic"></div>
+  </div>
 </section>
 

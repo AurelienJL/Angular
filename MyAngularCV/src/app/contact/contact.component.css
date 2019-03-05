@@ -1,0 +1,15 @@
+
+.footer-icons {
+   margin: 40px auto 60px auto;
+}
+
+a {
+    text-decoration: none;
+    padding: 0px 20px 0px 20px;
+}
+
+.fa {
+    font-size: 60px;
+    color: #00CC66;
+    cursor: pointer;
+}

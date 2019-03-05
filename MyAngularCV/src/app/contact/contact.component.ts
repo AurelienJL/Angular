@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { CvContentService } from './../cv-content/cv-content.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contactItems;
+
+  title:string = 'Contact';
+
+  constructor(private cvContentService: CvContentService) { }
 
   ngOnInit() {
+    this.contactItems = this.cvContentService.getContactData();
   }
 
 }

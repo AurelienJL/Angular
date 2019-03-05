@@ -10,12 +10,9 @@ export class HeaderComponent implements OnInit {
   
   isCollapsed: boolean = true;
 
-  navigationItems;
-
-  constructor(private cvContentService: CvContentService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.navigationItems = this.cvContentService.getNavItems();
   }
 
   onToggleMenu() {

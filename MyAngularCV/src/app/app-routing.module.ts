@@ -1,25 +1,27 @@
-import { MenuComponent } from './menu/menu.component';
+
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FormationComponent } from './formation/formation.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
-  // { path: 'menu', component: MenuComponent},
   { path: 'skills', component: SkillsComponent},
   { path: 'formation', component: FormationComponent},
-  { path: 'projects', component: ProjectsComponent},
-  { path: 'contact', component: ContactComponent},
+  { path: 'projects', component: ProjectsComponent}
 ];
 
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled'
+}
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

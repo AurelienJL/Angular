@@ -14,22 +14,6 @@ header {
     background-size: cover;
 }
 
-.transparent {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.navbar-toggler-icon {
-
-}
-
-.nav-link, .navbar-brand {
-    font-size: 20px;
-    color: #00CC66!important;
-}
-
-.navbar a:hover {
-    color:#E3DBDB!important;
-}
 
 .banner-center {
     height: 100vh;

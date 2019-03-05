@@ -1,6 +1,7 @@
 import { CvContentService } from './cv-content/cv-content.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { CvContentComponent } from './cv-content/cv-content.component';
 import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { TitleItemComponent } from './title-item/title-item.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +28,14 @@ import { MenuComponent } from './menu/menu.component';
     ContactComponent,
     CvContentComponent,
     FooterComponent,
-    MenuComponent 
+    MenuComponent,
+    NavigationBarComponent,
+    TitleItemComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFontAwesomeModule
   ],
   providers: [CvContentService],
   bootstrap: [AppComponent]

@@ -1,12 +1,8 @@
-import { presentationData, skillsData, formationData, menuItems, navItems } from './cv-content.data';
+import { presentationData, skillsData, formationData, menuItems, ContactData } from './cv-content.data';
 import { CvElement } from './cv-element';
 
 
 export class CvContentService {
-
-    getNavItems() {
-        return navItems;
-    }
 
     getMenuItems() {
         return menuItems;
@@ -20,7 +16,11 @@ export class CvContentService {
         return Promise.resolve(skillsData);
     }
 
-    getFormationData() :Promise<CvElement[]> {
+    getFormationData(): Promise<CvElement[]> {
         return Promise.resolve(formationData);
+    }
+
+    getContactData() {
+        return ContactData;
     }
 }

@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormationComponent implements OnInit {
 
+  title: string = 'Formation';
   formationData: CvElement[];
 
   constructor(private cvContentService: CvContentService) { }

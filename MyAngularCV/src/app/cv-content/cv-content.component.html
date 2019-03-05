@@ -1,28 +1,58 @@
-<div class="card m-3">
-  <div class="card-body">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-2 d-flex justify-content-center" style="border-right: 2px solid red;">
-          <img src="{{ cvElement.logo }}" alt="">
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-3 card card-header">
+      <a href="{{ cvElement.link }}" target="_blank">
+        <img src="{{ cvElement.logo }}" alt="{{ cvElement.title }}">
+      </a>
+    </div>
+
+    <div class="col-sm-9">
+      <div class="card">
+
+        <header class="card-header">
+          <i class="icon-action fa fa-chevron-down" (click)="onToggleCard()" data-toggle="collapse"
+            data-target="#cardfooter" [hidden]="!isCollapsed" 
+            *ngIf="cvElement.description !== '' && cvElement.description !== undefined
+            || cvElement.link !== '' && cvElement.link !== undefined
+            || cvElement.tags !== [] && cvElement.tags !== undefined && cvElement.tags.length > 0">
+          </i>
+          <span class="date-span text-muted"
+            *ngIf="cvElement.dateBegin !== '' && cvElement.dateBegin !== undefined">{{ cvElement.dateBegin }}
+            <i class="fa fa-long-arrow-right text-muted"></i>
+            {{ cvElement.dateEnd }}</span>
+          <span class="card-link">
+            <h4>{{ cvElement.title }}</h4>
+            <p class="text-muted">{{ cvElement.subtitle }}</p>
+          </span>
+        </header>
+
+        <div class="collapse" id="cardfooter" [class.collapse]="isCollapsed">
+          <article class="card-body">
+            
+            <p class="description">{{ cvElement.description }}</p>
+            
+            <div class="badge-group"
+              *ngIf="cvElement.tags !== [] && cvElement.tags !== undefined && cvElement.tags.length > 0">
+              <span class="badge badge-pill badge-secondary" *ngFor="let tag of cvElement.tags">
+                {{ tag }}
+              </span>
+            </div>
+
+            <p class="p-link">
+              <i class="fa fa-external-link" *ngIf="cvElement.link !== '' && cvElement.link !== undefined"></i>
+              <a href="{{cvElement.link}}" target="_blank"
+                *ngIf="cvElement.link !== '' && cvElement.link !== undefined">{{ cvElement.title }}</a>
+              </p>
+              <i class="icon-action fa fa-chevron-up" (click)="onToggleCard()" data-toggle="collapse"
+                data-target="#cardfooter" [hidden]="isCollapsed">
+              </i>
+              
+          </article>
         </div>
-        <div class="col-sm-10 text-center">
-          <h5 class="card-title">{{ cvElement.title }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <button type="button" (click)="onToggleCard()" data-toggle="collapse" data-target="#cardFooter"
-            aria-expanded="false">
-            <span></span>
-          </button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-10">
-          <div class="collapse" [class.collapse]="isCollapsed" id="cardFooter">
-            <p>{{ cvElement.description }}</p>
-          </div>
-        </div>
+
       </div>
     </div>
+
   </div>
 </div>
