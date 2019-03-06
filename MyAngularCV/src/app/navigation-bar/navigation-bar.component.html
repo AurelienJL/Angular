@@ -1,15 +1,15 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top transparent">
+<nav class="navbar navbar-expand-sm fixed-top transparent">
 
   <button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar" (click)="onToggleMenu()">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <a class="navbar-brand" routerLink="/home">AJL</a>
+  <a class="navbar-brand" routerLink="/home"> &lt;/AJL> </a>
 
   <div class="collapse navbar-collapse justify-content-end" [class.collapse]="isCollapsed" id="mynavbar">
     <ul class="navbar-nav">
       <li class="nav-item" *ngFor="let item of navigationItems">
-        <a class="nav-link" routerLink="{{item.url}}">{{item.label | titlecase}}</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="{{item.url}}">{{item.label | titlecase}}</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['../home']" fragment="contact" href="#contact">Contact</a>

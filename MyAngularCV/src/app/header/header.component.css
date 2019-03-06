@@ -1,19 +1,19 @@
 /* colors 
 #00CC66 green
 #E3DBDB grey
-#353531 black
+#1E272E black
 whitesmoke
 */
 
-
 header {
     height: 100vh;
-    background: url(../../assets/images/fog-forest.jpg) fixed;
+    background: url(../../assets/images/glasses.jpg);
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
-
 
 .banner-center {
     height: 100vh;
@@ -31,7 +31,7 @@ header {
 
 .banner-center a {
     font-size: 30px;
-    color:whitesmoke;
+    color: whitesmoke;
     width: 300px;
     margin: 0px auto;
     display: inline-block;
@@ -42,7 +42,16 @@ header {
 
 .banner-center a:hover,
 .banner-center a:focus {
-
     background-color: whitesmoke;
     color: #00CC66;
 }
+
+.credit { 
+    position: absolute;
+    bottom : 20px;
+    right: 20px;
+    font-size: 10px;
+}
+
+
+

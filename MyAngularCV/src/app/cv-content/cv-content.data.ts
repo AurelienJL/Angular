@@ -5,68 +5,74 @@ export const menuItems = [
     {
         url: '../skills',
         label: 'compétences',
-        iconName: 'code'
+        iconName: 'code',
+        introduction: 'Un aperçu et une évaluation de mes capacités sur différents langages informatiques, frameworks et technologies que j\'ai étudié.'
     },
     {
         url: '../formation',
         label: 'formation',
-        iconName: 'graduation-cap'
+        iconName: 'graduation-cap',
+        introduction: 'Mon parcours, de ma formation universitaire en chimie organique jusqu\'à ma certification en tant que développeur Java J2EE.'
     },
     {
         url: '../projects',
         label: 'projets',
-        iconName: 'tasks'
+        iconName: 'tasks',
+        introduction: 'Une illustration de mes compétences : les projets que j\'ai réalisé au cours de ma formation ainsi que mes projets personnels.'
     },
 ];
 
 export const presentationData = {
-    name: 'Aurélien Jacquin-Labarre',
-    position: 'Développeur JAVA-EE',
-    description: 'Bonjour, je m\'appelle Aurélien et je vis actuellement à Caen, en Normandie!'
+    firstname: 'Aurélien',
+    lastname: 'Jacquin-Labarre',
+    position: 'Développeur Java - Angular',
+    description: 'J\'ai 30 ans et je vis à Caen, en Normandie. Chimiste organicien en reconversion, c\'est par curiosité que je me suis essayé au développement informatique et par passion que j\'ai continué à apprendre le Java ainsi que d\'autres langages et technologies. Je suis recemment certifié par M2i en tant que développeur Java J2EE. Auto-didacte, ma formation s\'est ensuite orientée vers le web et plus précisement Angular. Aujourd\'hui, je suis à la recherche d\'une première expérience en entreprise donc j\'espère que ce CV va vous convaincre.',
+    hobbies: 'Au delà l\'informatique, je suis passionné de musique rock (Led Zeppelin, Black Sabbath...), de cinéma ainsi que de sport tel que le volley-ball et le cyclisme. Je suis également, depuis plus d\'un an, accroc au "geocaching", une chasse au trésor qui s\'accompagne d\'énigmes et permet de découvrir notre patrimoine. Mon terrain de jeu étant nos villes, nos fôrêts et nos campagnes, je suis d\'autant plus sensible à prendre soin de la nature.'
 };
 
 export const skillsData: CvElement[] = [
     {
         title: 'JAVA',
         logo: '../../assets/icons/java.svg',
-        subtitle: '',
-        description: 'Java est le langage avec lequel j\' le plus d\'expériences'
+        subtitle: 'Langage de programmation back-end',
+        tags: ['Java8', 'JavaSE', 'swing', 'awt', 'POO', 'JDBC', 'JavaEE', 'Servlet', 'JSP', 'JSTL', 'Tomcat', 'Eclipse']
+        
     },
     {
         title: 'HTML5',
         logo: '../../assets/icons/html5.svg',
-        subtitle: '',
-        description: 'language Front-end'
+        subtitle: 'Langage de balisage pour représenter les pages web',
+        tags: ['Flexbox', 'Responsive Design', 'Visual Studio Code']
     },
     {
         title: 'CSS3',
         logo: '../../assets/icons/css3.svg',
-        subtitle: '',
-        description: 'language Front-end'
+        subtitle: 'Langage de mise en forme des fichiers HTML',
+        tags: ['Bootstrap', 'Visual Studio Code']
     },
     {
-        title: 'Angular7',
+        title: 'Angular 7',
         logo: '../../assets/icons/angular.svg',
-        subtitle: '',
-        description: 'Framework'
+        subtitle: 'Framework front-end open-source basé sur TypeScript',
+        tags: ['TypeScript', 'ES6', 'databinding', 'directives', 'services', 'DI', 'routing', 'Visual Studio Code']
+        
     },
     {
-        title: 'Spring',
+        title: 'Spring 5',
         logo: '../../assets/icons/spring.svg',
-        subtitle: '',
-        description: 'Framework'
+        subtitle: 'Framework back-end pour application Java',
+        tags: ['Inversion of Control', 'DI', 'JavaBean', 'MVC', 'Data JPA', 'Eclipse']
     },
     {
         title: 'Hibernate',
         logo: '../../assets/icons/hibernate.svg',
-        subtitle: '',
-        description: 'Framework'
+        subtitle: 'Framework pour la persistance en base de données relationnel',
+        tags: ['Mapping', 'CRUD', 'Eclipse']
     },
     {
         title: 'Git',
         logo: '../../assets/icons/git.svg',
-        subtitle: '',
-        description: ''
+        subtitle: 'Logiciel de gestion de version décentralisé'
     }
 ];
 

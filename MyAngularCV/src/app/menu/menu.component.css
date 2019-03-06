@@ -1,14 +1,13 @@
 /* colors 
 #00CC66 green
 #E3DBDB grey
-#353531 black
+#1E272E black
 whitesmoke
 */
 
-
 #menu {
     padding: 40px;
-    color: #353531;
+    color: #1E272E;
     background-color: #E3DBDB;
 }
 
@@ -29,18 +28,20 @@ whitesmoke
 } 
 
 #about {
-    background-color: #353531;
+    background-color: #1E272E;
+    color: whitesmoke;
+    text-align: justify;
 }
 
 #about .pic {
     height: 100vh;
-    background: url(../../assets/images/big-dream.jpg);
+    background: url(../../assets/images/matrix.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom: 600px solid transparent;
-    border-left: 100px solid #353531;
+    border-bottom: 100vh solid transparent;
+    border-left: 100px solid #1E272E;
 }
 
 #about .box {

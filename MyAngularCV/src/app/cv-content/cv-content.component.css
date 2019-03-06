@@ -1,9 +1,10 @@
 /* colors 
 #00CC66 green
 #E3DBDB grey
-#353531 black
+#1E272E black
 whitesmoke
 */
+
 
 .container {
     margin: 10px auto 10px auto;
@@ -59,6 +60,8 @@ header .card-header {
     margin-right: 5px;
     margin-top: 5px;
     font-size: 16px;
+    background-color: #00CC66;
+    color: #1E272E;
 }
 
 .badge-group {

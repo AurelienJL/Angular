@@ -9,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   title: string = 'Menu';
-  title2: string = 'About';
   menuItems;
+  presentationItems;
 
   constructor(private cvContentService: CvContentService) { }
 
   ngOnInit() {
     this.menuItems = this.cvContentService.getMenuItems();
+    this.presentationItems = this.cvContentService.getPresentationData();
   }
 
 }

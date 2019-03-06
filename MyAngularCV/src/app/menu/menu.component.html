@@ -4,17 +4,19 @@
     <div class="col-md-4" *ngFor="let item of menuItems">
       <h2>{{item.label | titlecase}}</h2>
       <fa name="{{item.iconName}}"></fa>
-      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas magni ea veritatis aspernatur, debitis porro eveniet! Distinctio hic aliquam nemo enim! Tempora expedita, quam perferendis unde officiis suscipit magni explicabo.</p>
+      <p class="text-muted text-justify">{{ item.introduction }}</p>
       <button routerLink="{{item.url}}" class="btn btn-block">En savoir plus...</button>
     </div>
   </div>
 </section>
 
-<section id="about" class="container-fluid">
+<section id="about" class="container-fluid ">
   <div class="row">
     <div class="col-sm-4 text-center box">
-      <app-title-item [title]="title2"></app-title-item>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae non magni ipsum tempore adipisci, repellendus beatae harum fugit eos illum quisquam aliquid ullam cupiditate voluptate amet vero fuga recusandae minima!</p>
+      <app-title-item [title]="presentationItems.firstname"></app-title-item>
+      <p class="text-muted">{{ presentationItems.position }}</p>
+      <p class="text-justify">{{presentationItems.description}}</p>
+      <p class="text-justify">{{presentationItems.hobbies}}</p>
     </div>
     <div class="col-sm-8 pic"></div>
   </div>

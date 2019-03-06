@@ -1,6 +1,7 @@
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { CvContentService } from './../cv-content/cv-content.service';
 import { CvElement } from './../cv-content/cv-element';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-formation',
@@ -15,8 +16,8 @@ export class FormationComponent implements OnInit {
   constructor(private cvContentService: CvContentService) { }
 
   ngOnInit() {
-   this.cvContentService.getFormationData().then(
-     data => this.formationData = data
-   );
+    this.cvContentService.getFormationData().then(
+      data => this.formationData = data
+    );
   }
 }

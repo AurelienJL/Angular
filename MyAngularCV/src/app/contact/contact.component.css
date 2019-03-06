@@ -1,3 +1,13 @@
+/* colors 
+#00CC66 green
+#E3DBDB grey
+#1E272E black
+whitesmoke
+*/
+
+section {
+    color: #1E272E;
+}
 
 .footer-icons {
    margin: 40px auto 60px auto;
