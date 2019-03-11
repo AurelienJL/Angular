@@ -10,10 +10,10 @@
             <span class="help-block"
               *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched">
               <span 
-              *ngIf="signupForm.get('userData.username').errors['nameIsForbidden']">
+              *ngIf="signupForm.get('userData.username').hasError['nameIsForbidden']">
               This name is invalid</span>
               <span 
-              *ngIf="signupForm.get('userData.username').errors['required']">
+              *ngIf="signupForm.get('userData.username').hasError['required']">
               This field is required</span>
             </span>
           </div>
