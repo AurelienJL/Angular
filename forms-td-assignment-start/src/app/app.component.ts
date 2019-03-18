@@ -29,4 +29,5 @@ export class AppComponent {
     this.loginDetails.sub = this.authForm.value.subscriptions;
     this.loginDetails.pwd = this.authForm.value.password;
   }
+  
 }
