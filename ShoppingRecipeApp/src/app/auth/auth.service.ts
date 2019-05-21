@@ -1,6 +1,7 @@
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
+import { getToken } from '@angular/router/src/utils/preactivation';
 
 @Injectable()
 export class AuthService {
@@ -22,10 +23,7 @@ export class AuthService {
             .then(
                 response => {
                     this.router.navigate(['/']);
-                    firebase.auth().currentUser.getIdToken()
-                        .then(
-                            (token: string) => this.token = token
-                        )
+                    this.getToken();
                 }
             )
             .catch(

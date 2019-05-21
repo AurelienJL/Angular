@@ -16,8 +16,7 @@ const appRoutes: Routes = [
     imports: [
       RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules})
     ],
-    exports: [RouterModule],
-    providers: [AuthGuard]
+    exports: [RouterModule]
 })
 export class AppRoutingModule {
 

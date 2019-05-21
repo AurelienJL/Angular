@@ -44,4 +44,4 @@ testem.log
 Thumbs.db
 
 # contains apikey
-app.component.ts
+/app.component.ts

@@ -8,6 +8,10 @@ import { AuthService } from '../auth/auth.service';
 import { HttpService } from '../shared/http.service';
 import { RecipeService } from '../recipes/recipe.service';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import { AuthGuard } from '../auth/auth-guard.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from '../shared/auth.interceptor';
+
 
 @NgModule({
     declarations: [
@@ -22,7 +26,14 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
         AppRoutingModule,
         HeaderComponent
     ],
-    providers: [ShoppingListService, RecipeService, HttpService, AuthService]
+    providers: [
+        ShoppingListService, 
+        RecipeService, 
+        HttpService, 
+        AuthService,
+        AuthGuard, 
+        {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
+    ]
 })
 export class CoreModule {
 
